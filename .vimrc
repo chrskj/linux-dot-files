@@ -15,10 +15,10 @@ Plugin 'VundleVim/Vundle.vim'
 " Darcula Color theme
 Plugin 'dracula/vim'
 
-"Git wrapper
+" Git wrapper
 Plugin 'tpope/vim-fugitive'
 
-"Show git changes in file
+" Show git changes in file
 Plugin 'airblade/vim-gitgutter'
 
 " New status bar
@@ -27,8 +27,11 @@ Plugin 'vim-airline/vim-airline'
 " Code completion
 Plugin 'valloric/youcompleteme'
 
-"Auto close brackets
+" Auto close brackets
 Plugin 'jiangmiao/auto-pairs'
+
+" Switch between .h and .c
+Plugin 'ericcurtin/curtineincsw.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -214,7 +217,10 @@ if has("autocmd")
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => YCM configs
+" => Plugin configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set global ycm config file
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/youcompleteme/.ycm_extra_conf.py'
+
+" Set Curtine shortcut
+map <F5> :call CurtineIncSw()<CR>
